@@ -1,0 +1,101 @@
+
+
+body{
+    background-image: url('../image/bg.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.bg-dark{
+    background-color: rgba(0, 0, 0, 0.529)!important;
+}
+
+.my-lg-3{
+    width: 23%;
+}
+ .form-control{
+    width: 100%;
+}
+
+
+
+footer div{
+    width: 25%;
+    font-size: smaller;
+}
+footer i{
+    font-size: 2em;
+    
+}
+
+#connect{
+    height: 350px;
+    
+}
+.connectValider{
+    transform: translate(280%, 20%);
+}
+#connect form{
+    padding: 1em;
+}
+input[type ='password'],  input[type ='text'] , input[type='email'], textarea {
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    
+}
+
+#connect form input[type='email']{
+    transform: translateX(1%);
+}
+#connect form input[type = 'text'] {
+    transform: translateX(4%);
+}
+.link label{
+    margin: 0;
+}
+
+#divRemember{
+    transform: translateX(70%);
+    
+}
+form a{
+    transform: translateX(-30%);
+    
+}
+form input[type='submit']{
+    background-color: rgba(0, 0, 0, 0.450);
+    border: none;
+    color: white;
+    padding: 0.5em;
+}
+.w-80{
+    width: 80%;
+    padding: 1em;
+}
+.tranform-translate{
+
+    transform: translate(494%, 0%);
+
+}
+.img{
+
+    width: 300px;
+}
+
+.imgProfile{
+    height: 75px;
+    width:  75px;
+}
+.higest{
+
+    font-size: 4rem;
+} aside{
+    position: absolute;
+    top: 6%;
+    left: 76%;
+}
+.relative {
+    position: relative;
+}
