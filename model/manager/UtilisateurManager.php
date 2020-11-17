@@ -181,6 +181,15 @@ self::$classname;
           ]);
 
     }
-    
+    public function countUtilisateur()
+    {
+
+        $sql = "SELECT  COUNT(*) as countUtilisateur
+                FROM utilisateur";
+
+        return self::select(
+            $sql
+        );
+    }
 
 }

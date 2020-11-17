@@ -98,10 +98,9 @@ class MessageManager extends AbstractManager
                 GROUP BY sujetId";
 
         return self::select(
-                $sql,
-                [":sujet" => $sujet]
+            $sql,
+            [":sujet" => $sujet]
         );
-         
     }
     public function countMessageBySujetLimit()
     {
@@ -114,9 +113,32 @@ class MessageManager extends AbstractManager
                 LIMIT 3 ";
 
         return self::select(
-                $sql
+            $sql
         );
-         
     }
+    public function countMessage()
+    {
 
+        $sql = "SELECT  COUNT(*) as countMessage 
+                FROM msg";
+
+        return self::select(
+            $sql
+        );
+    }
+    public function lastestMessages()
+    {
+
+        $sql = "SELECT * 
+            FROM msg 
+            ORDER BY dateMessage DESC
+            LIMIT 2  ";
+
+        return self::getResults(
+            self::select(
+                $sql
+            ),
+            self::$classname
+        );
+    }
 }

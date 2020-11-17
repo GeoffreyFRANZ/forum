@@ -4,7 +4,7 @@
 if(App\Session::getUser()){
     echo "<h2>Vous êtes déjà connecté sous le nom ".App\Session::getUser()."</h2>";
 }
-var_dump(password_hash('123456..', PASSWORD_BCRYPT))
+
 ?>
 
 

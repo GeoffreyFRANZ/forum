@@ -91,11 +91,16 @@ form input[type='submit']{
 .higest{
 
     font-size: 4rem;
-} aside{
-    position: absolute;
-    top: 6%;
-    left: 76%;
 }
 .relative {
     position: relative;
+}
+aside {
+    width: 300px;
+    transform: translateX(20%);
+    margin: 0.75em 0 ;
+}
+.allCat{
+    width: 75%;
+    transform: translateX(16%);
 }

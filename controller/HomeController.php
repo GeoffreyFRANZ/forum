@@ -29,8 +29,12 @@ class HomeController extends SecurityController
         $cat = $manager->findAll();
         $lastInscrit =  $userMan->lastUser();
         $msgCount = $msgMan->countMessageBySujetLimit();
+        $lastestMessages =  $msgMan->lastestMessages();;
+        $countMessage = $msgMan->countMessage();
+        $countSujet = $topicManager->countSujet();
+        $countUser =  $userMan->countUtilisateur();
+    
 
-  
         if (isset($_GET['search'])) {
             $result =  $topicManager->findByName($_GET['search']);
 
@@ -42,21 +46,27 @@ class HomeController extends SecurityController
                     "result" => $result,
                     "inscrit" => $lastInscrit,
                     "count" => $msgCount,
+                    "message" => $lastestMessages,
+                    'messageCount' => $countMessage,
+                    'sujetCount' => $countSujet,
+                    'userCount' => $countUser,
                     
-
                 ],
                 "titrePage" => "FORUM | Accueil"
             ];
         }
-
+        
         return [
             "view" => "home.php",
             "data" => [
-
+                
                 "categories" => $cat,
                 "inscrit" => $lastInscrit,
                 "count" => $msgCount,
-
+                "message" => $lastestMessages,
+                'messageCount' => $countMessage,
+                'sujetCount' => $countSujet,
+                'userCount' => $countUser,
             ],
             "titrePage" => "FORUM | Accueil"
         ];
@@ -339,5 +349,4 @@ class HomeController extends SecurityController
 
         return Router::redirectTo("Home", "panneauAdmin");
     }
-    
 }

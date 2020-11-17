@@ -172,4 +172,14 @@ class TopicManager extends AbstractManager
         );
 
     }
+    public function countSujet()
+    {
+
+        $sql = "SELECT  COUNT(*) as countSujet
+                FROM topic";
+
+        return self::select(
+            $sql
+        );
+    }
 }
