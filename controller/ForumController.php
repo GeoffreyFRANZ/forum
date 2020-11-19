@@ -45,17 +45,21 @@ class ForumController extends SecurityController
      */
     public function allTopicsByCat()
     {
-
-        $id = $_GET['id'];
-
+    
         $manTopic = new TopicManager();
         $userMan = new UtilisateurManager();
         $manCat = new CategoryManager();
         $messageManager = new MessageManager();
-
+        
+        $id = $_GET['id']; 
+        $pageCourante = $_GET['p'];
+        
         $titre = $manCat->findOneById($id);
         $topics = $manTopic->findOneBy($id);
         
+       $nbTopic = $manTopic->CountBy($id);
+       
+
         foreach($topics as $topic){
             $auteur = $topic->getUserId();
             $idTopic =  $topic->getId();

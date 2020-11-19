@@ -38,7 +38,7 @@ $utilisateur =  new  UtilisateurManager();
     ?>
       <div class="bg-dark d-flex flex-wrap flex-column align-middle ml-auto mr-auto  mt-3 w-75">
 
-        <h2 class="text-white p-3 text-center"><a href='?ctrl=Forum&method=allTopicsByCat&id=<?= $id ?>'><?php echo $cat->getNomCategorie(); ?></a> </h2>
+        <h2 class="text-white p-3 text-center"><a href='?ctrl=Forum&method=allTopicsByCat&id=<?= $id ?>&p=1'><?php echo $cat->getNomCategorie(); ?></a> </h2>
 
         <?php foreach ($sujetByCat as $s) {
           $count =  $countMessage->countMessageBySujet($s->getId());

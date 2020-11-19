@@ -51,8 +51,9 @@ class TopicManager extends AbstractManager
     {
         $sql = "SELECT * 
                         FROM  topic
-                        WHERE categorieId = :id";
-
+                        WHERE categorieId = :id 
+                        LIMIT 0 , 5";
+                        
         return self::getResults(
             self::select(
                 $sql,
@@ -60,6 +61,17 @@ class TopicManager extends AbstractManager
             ),
             self::$classname
         );
+    }
+    public function CountBy($id)
+    {
+        $sql = "SELECT COUNT(*) as   nbTopic
+                        FROM  topic
+                        WHERE categorieId = :id ";
+                        
+        return self::select(
+                $sql,
+                [":id" => $id]
+            );
     }
     public function findOneByLimite($id)
     {

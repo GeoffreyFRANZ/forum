@@ -8,8 +8,8 @@ $userMan = new UtilisateurManager(); ?>
 
 
 
-
 <?php
+var_dump($_GET);
 
 $titre =  $data['titre']; ?>
 <h1 class=" text-center higest text-white"><?php echo $titre->getNomCategorie() ?></h1>

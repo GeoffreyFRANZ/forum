@@ -1,8 +1,8 @@
 
 
 body{
-    background-image: url('../image/bg.png');
-    background-repeat: repeat-y;
+    background-image: url('image/bg2.PNG');
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
