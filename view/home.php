@@ -16,14 +16,16 @@ $utilisateur =  new  UtilisateurManager();
 <form class="my-lg-3" method="GET" action="index.php">
   <input id="search" class="form-control mr-sm-2 bg-dark text-white" name="search" type="search" placeholder="Search" aria-label="Search">
 </form>
-<?php if (isset($_GET['search'])) {
+<?php if (isset($_GET['search'])) { ?>
 
-  foreach ($data["result"] as $result) { ?>
+  <div id="suggestions"></div>
+
+<?php  //foreach ($data["result"] as $result) { ?>
 
     <div class="w-100  ">
-      <p class="text-white"><?php echo $result->getNomTopic();  ?></p>
+      <p class="text-white"><?php // echo $result->getNomTopic();  ?></p>
     </div>
-<?php }
+<?php //}
 }
 ?>
 <div class=" d-flex flex-wrap m-1 ">

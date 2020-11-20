@@ -53,10 +53,12 @@ class ForumController extends SecurityController
         
         $id = $_GET['id']; 
         $pageCourante = $_GET['p'];
-        
+        $nbPage =  ceil($manTopic->countBy($id)[0]['nbTopic'] / 5) ;
+
         $titre = $manCat->findOneById($id);
-        $topics = $manTopic->findOneBy($id);
+        $topics = $manTopic->findOneBy($id, $pageCourante);
         
+
        $nbTopic = $manTopic->CountBy($id);
        
 
@@ -76,7 +78,8 @@ class ForumController extends SecurityController
                 "data" => [
                     "topic" => $topics,
                     "titre" => $titre,
-                    "auteur" => $utilisateur                    
+                    "auteur" => $utilisateur ,
+                    "nbPage"  => $nbPage                 
                 ],
 
             ];

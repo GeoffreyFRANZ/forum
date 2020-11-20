@@ -36,7 +36,15 @@ class HomeController extends SecurityController
     
 
         if (isset($_GET['search'])) {
+            
             $result =  $topicManager->findByName($_GET['search']);
+            foreach($result as $res){
+                
+                if ($res->execute() ){
+                    $result = json_encode($result);
+                    var_dump($result);
+                }
+            }
 
             return [
                 "view" => "home.php",
@@ -50,7 +58,7 @@ class HomeController extends SecurityController
                     'messageCount' => $countMessage,
                     'sujetCount' => $countSujet,
                     'userCount' => $countUser,
-                    
+                    //'result' => json_encode($result)    
                 ],
                 "titrePage" => "FORUM | Accueil"
             ];
@@ -67,6 +75,7 @@ class HomeController extends SecurityController
                 'messageCount' => $countMessage,
                 'sujetCount' => $countSujet,
                 'userCount' => $countUser,
+                
             ],
             "titrePage" => "FORUM | Accueil"
         ];

@@ -47,12 +47,12 @@ class TopicManager extends AbstractManager
         );
     }
 
-    public function findOneBy($id)
+    public function findOneBy($id , $page)
     {
         $sql = "SELECT * 
                         FROM  topic
                         WHERE categorieId = :id 
-                        LIMIT 0 , 5";
+                        LIMIT ".(($page-1)* 5)." , 5";
                         
         return self::getResults(
             self::select(

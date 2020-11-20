@@ -54,10 +54,12 @@ foreach ($data['topic'] as $topics) {
 
   </div>
 
-<?php   }  ?>
+<?php   } for($i =  1 ; $i <= $data['nbPage']; $i++){  ?>
 
+<a href="?ctrl=Forum&method=allTopicsByCat&id=<?= $_GET['id'] ?>&p=<?= $i ?>"> <span class="text-white bg-dark p-2" ><?php echo $i ?></span> </a>
 
-<?php if (isset($_SESSION['user'])) { ?>
+<?php }
+if (isset($_SESSION['user'])) { ?>
 
   <form action="?ctrl=forum&method=addTopics&id=<?= $_GET['id'] ?>" class="d-flex align-items-center flex-column mb-4" method="post">
     <input class="m-1" placeholder="titre de votre sujet" name="topic" type="text">
