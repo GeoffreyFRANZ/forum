@@ -16,7 +16,6 @@ document.querySelector('#search').addEventListener('keyup',function () {
 
     
     let results = JSON.parse(data)
-    console.log(results)
     results.forEach( function(elem) {
         document.querySelector('#suggestions').innerHTML += ` <li id="${elem.id}">coucou</li>`
     });
