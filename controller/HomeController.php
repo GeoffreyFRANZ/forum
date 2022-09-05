@@ -42,7 +42,6 @@ class HomeController extends SecurityController
                 
                 if ($res->execute() ){
                     $result = json_encode($result);
-                    var_dump($result);
                 }
             }
 
@@ -286,7 +285,6 @@ class HomeController extends SecurityController
 
             $verification  =    Session::changeMdp($oldMdp,  Session::getUser()->getMdp(), $newMdp, $confirmNewMdp);
 
-            var_dump($verification);
             $hashMdp =  password_hash($verification, PASSWORD_BCRYPT);
 
             if ($verification !== false) {
@@ -350,7 +348,6 @@ class HomeController extends SecurityController
     {
         $userMan = new UtilisateurManager();
 
-        var_dump($_POST['role']);
 
         $user = $userMan->findBy($_SESSION['connected']);
 

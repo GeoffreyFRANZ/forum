@@ -5,7 +5,6 @@
     {
         public static function CSRFProtection($csrf_token){
             if(!empty($_POST)){
-                // var_dump($_POST["csrf_token"]);
                 if(isset($_POST['csrf_token'])){
                     $form_csrf = $_POST['csrf_token'];
                     if(hash_equals($form_csrf, $csrf_token)){
@@ -30,7 +29,6 @@
             if(isset($get['method']) && method_exists($ctrl, $get['method'])){
                 $method = $get['method'];
             }
-            
             return $ctrl->$method();
         }
 

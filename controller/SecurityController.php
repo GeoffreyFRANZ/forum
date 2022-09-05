@@ -65,6 +65,8 @@ class SecurityController
         ];
     }
 
+
+
     public function logout(){
         Session::removeUser();
         Router::redirectTo("home");
