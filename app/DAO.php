@@ -7,7 +7,7 @@ abstract class DAO
     const DB_HOST = "localhost";
     const DB_NAME = "forum";
     const DB_USER = "root";
-    const DB_PASS = "";
+    const DB_PASS = "5991";
     const DB_CHARSET = "utf8";
  
     public static function getConnection()
