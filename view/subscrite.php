@@ -35,19 +35,20 @@
     <form action="?ctrl=security&method=register" class="p-0" method="POST">
         <div class=" w-100  d-flex justify-content-center m-2">
             <i class="  m-2 text-white fa fa-user"></i>
-            <input type="email" class="text-white" name="email" id="email" placeholder="email" value="test2022@test.com ">
+            <input type="email" class="text-white" name="email" id="email" placeholder="email">
         </div>
         <div class=" w-100  d-flex justify-content-center m-2">
-            <input type="text" class="text-white" name="username" id="username" placeholder="username" value="test2022">
+            <input type="text" class="text-white" name="username" id="username" placeholder="username">
         </div>
         <div class="w-100  d-flex justify-content-center m-2">
-            <i class=" m-2  text-white  fa fa-key"></i> <input class="" type="password"  value="123456++" class="text-white" name="pass1" id="mdp" placeholder="pass1">
+            <i class=" m-2  text-white  fa fa-key"></i> <input class="" type="password" class="text-white" name="pass1" id="mdp" placeholder="pass1">
         </div>
         <div class="   m-auto d-flex justify-content-center m-2" >
-            <input class="ml-5 " class="text-white" type="password" name="pass2" placeholder="pass2" value="123456++" id="confirm_password">
+            <input class="ml-5 " class="text-white" type="password" name="pass2" placeholder="pass2" id="confirm_password">
         </div>
         <div  class=" link d-flex align-midle justify-content-around " >
-            <div id="divRemember" class="mt-2"><input type="checkbox" class="ml-4 text-white" name="remember" id="remember"> <label class="text-white" for="remember"> se souvenir de moi </label></div>
+            <div id="divRemember" class="mt-2">
+                <input type="checkbox" class="ml-4 text-white" name="remember" id="remember"> <label class="text-white" for="remember"> se souvenir de moi </label></div>
             <a class="nav-link text-white mr-4" href="#">pas encore inscrit ? </a>
         </div>
         <div class="justify-content-center d-flex">
@@ -55,7 +56,6 @@
             <input  type="submit" value="Valider">
         </div>
     </form>
-
 </div>
 
 
